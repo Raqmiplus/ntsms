@@ -85,14 +85,14 @@ class CustomerController extends Controller
         log_activity(__('User is trying to send sms.'), ['sms' => $v['text'], 'user' => $user], $customer);
 
 
-        $sid    = "ACe0de83c6ec2a9ac3a832bac588543739";
-        $token  = "eeaeccec7d531bb0aa911f922e625e94";
+        $sid    = "ACf44535f2b613909d05e1da0441d61465";
+        $token  = "1aba1aa0eb34364f5860020d5877b96a";
         $twilio = new Client($sid, $token);
 
         $message = $twilio->messages
                         ->create("whatsapp:+971501743345", // to
                                 array(
-                                    "from" => "whatsapp:+19033006353",
+                                    "from" => "whatsapp:+12768811961",
                                     "body" => "Your Yummy Cupcakes Company order of 1 dozen frosted cupcakes has shipped and should be delivered on July 10, 2019. Details: http://www.yummycupcakes.com/"
                                 )
                         );
