@@ -85,8 +85,8 @@ class CustomerController extends Controller
         log_activity(__('User is trying to send sms.'), ['sms' => $v['text'], 'user' => $user], $customer);
 
 
-        $sid    = "ACf44535f2b613909d05e1da0441d61465";
-        $token  = "1aba1aa0eb34364f5860020d5877b96a";
+        $sid    = "AC719d3fb4f05778fae7cb1d2bc048fb4b";
+        $token  = "c2fc9d53f92757fd27bc3554e5e60ba9";
         $twilio = new Client($sid, $token);
 
         $message = $twilio->messages
