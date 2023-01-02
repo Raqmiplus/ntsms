@@ -1,10 +1,10 @@
 <template>
   <div v-if="order" class="w-full -my-6">
     <div class="w-full bg-white rounded shadow-lg leading-normal p-4">
-      <h4 class="font-bold">{{ $t('Send SMS to Customer') }}</h4>
+      <h4 class="font-bold">{{ $t('Send Whatsapp message to Customer') }}</h4>
       <h4 class="text-sm mt-2 mb-4" v-html="$t('sending_to_html', { name: order.customer.name, phone: order.customer.phone })"></h4>
       <div v-if="sent" class="text-green-500 mb-4">
-        {{ $t('SMS has been successfully sent to customer.') }}
+        {{ $t('Whatsapp message has been successfully sent to customer.') }}
       </div>
       <div v-else>
         <div v-if="error" class="text-red-500 mb-4">
@@ -14,7 +14,7 @@
           {{ errors.text.join(', ') }}
         </div>
       </div>
-      <textarea-input v-model="text" :resize="false" :errors="errors?.text" class="pb-10 w-full" label="SMS Text" />
+      <textarea-input v-model="text" :resize="false" :errors="errors?.text" class="pb-10 w-full" label="Whatsapp message Text" />
       <div class="-m-4 px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center rounded-b">
         <button class="text-gray-700 hover:text-gray-800" type="button" @click="$emit('close')">
           {{ $t('Cancel') }}
